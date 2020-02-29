@@ -6,7 +6,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features =".//Features/Login.feature",
+		//features =".//Features/Login.feature", //run single only
+		//features = {".//Features/Login.feature", ".//Features/xyz.feature"}, //To run mutiple files
+	    features =".//Features/", //if you want run all 
 		glue 	 ="stepDefinations",
 		dryRun   = false,
 		monochrome=true,
