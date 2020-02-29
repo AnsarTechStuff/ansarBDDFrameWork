@@ -1,10 +1,15 @@
 Feature: Login
 
+	Background: Below are the common steps for each scenario
+		
+		Given User Launch Chrome browser
+		When  User opens URL "http://admin-demo.nopcommerce.com/login"
+		
+
 Scenario Outline: Successful Login with Valid Credentials
-	Given User Launch Chrome browser
-	When  User opens URL "http://admin-demo.nopcommerce.com/login"
+	
 	And   User enters Email as "<email>" and Password as "<password>"
-	And   Click on Login 
+	And   Click on Login 	
 	Then  Page Title should be "Dashboard / nopCommerce administration"
 	When  User click on Log out link
 	Then  Page Title should be "Your store. Login"
